@@ -8,7 +8,7 @@ The script is tested with Ubuntu 20.04
 
 ## Software
 
-To install the software on the VM execute the 'install.sh' script located on the desktop using super-user privileges:
+To install the software on the VM execute the 'install.sh' script located in the root using super-user privileges:
 ``` bash
 sudo ./install.sh
 ```
