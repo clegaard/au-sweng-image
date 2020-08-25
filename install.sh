@@ -1,6 +1,9 @@
 apt update
 apt upgrade
-apt install build-essential libzmq3-dev python3 python3-distutils curl git cmake 
+apt install build-essential libzmq3-dev python3 python3-distutils curl git git-lfs cmake 
+
+# setup git large file storages (used for vidoes of +100Mb)
+git lfs install
 
 # change to temporary directory to avoid cluttering
 cd /tmp
