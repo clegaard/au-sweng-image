@@ -1,0 +1,10 @@
+[TIMESTAMP]:Wed Nov 20 13:48:07 2019
+[MESSAGE]  :Taking user inputs...
+[TIMESTAMP]:Wed Nov 20 13:51:47 2019
+[MESSAGE]  :User input complete
+[TIMESTAMP]:Wed Nov 20 13:51:47 2019
+[MESSAGE]  :Computing arithmetic operation
+[TIMESTAMP]:Wed Nov 20 13:51:47 2019
+[MESSAGE]  :1 + 2 = 3
+[TIMESTAMP]:Wed Nov 20 13:51:47 2019
+[MESSAGE]  :END OF LOG

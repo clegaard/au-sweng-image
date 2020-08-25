@@ -1,0 +1,63 @@
+/*
+ * Evaluate an expression recursively.
+ */
+
+#include "eval_hof2.h"
+
+/* evaluate the expression */
+int evaluate(node* p)
+{
+  int left_eval;  /* evaluation of left branch */
+  int right_eval; /* evaluation of right branch */
+
+  /* base case */
+  if(p->com == NUMBER)
+    return p->num;
+  else   /* recursive step */
+  {
+    left_eval  = evaluate(p->lchild);
+    right_eval = evaluate(p->rchild);
+    
+    return p->op(left_eval, right_eval);
+  }
+}
+
+/* functions to construct a tree */ 
+node *make_number(int value)
+{
+    node *no = (node*) malloc(sizeof(node));
+    no->com = NUMBER;
+    no->num = value;
+    return no;
+}
+
+node *make_operator(Operator op, node *left, node *right)
+{
+    node *no = (node*) malloc(sizeof(node));
+    no->com = OPERATOR;
+    no->op = op;
+    no->lchild = left;
+    no->rchild = right;
+    return no;
+}
+
+void free_node(node* p)
+{
+  if(p->com == NUMBER)
+    free(p);
+  else   /* recursive step */
+  {
+    free_node(p->lchild);
+    free_node(p->rchild);
+    free(p);
+  }
+}
+
+/* some functions that conform the the Operator
+ * prototype declaration
+ */
+int plus  (int a, int b) { return a + b;}
+int minus (int a, int b) { return a - b;}
+int mult  (int a, int b) { return a * b;}
+int divide(int a, int b) { assert (b != 0); return a / b;}
+
