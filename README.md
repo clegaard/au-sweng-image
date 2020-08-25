@@ -10,9 +10,15 @@ The script is tested with Ubuntu 20.04
 
 To install the software on the VM execute the 'install.sh' script located on the desktop using super-user privileges:
 ``` bash
-sudo install.sh
+sudo ./install.sh
 ```
+You may have to grant execution permission to the script using the 'chmod' command:
+``` bash
+chmod +x install.sh
+```
+
 The following software is installed by the script
+* curl
 * Git
 * pip + python3-disutils
 * GNU Compiler Collection (GCC)
